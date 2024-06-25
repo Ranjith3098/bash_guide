@@ -1,0 +1,121 @@
+echo hello -- To print
+
+The text editor `Vim`
+
+Press i to insert mode 
+Press Esc to exit the insert mode
+Press :w to write mode 
+Press :q to quit the editor
+Press Both :qw to write and quit the editor
+
+cat is used to view the file 
+
+LETS Write a scrpit file
+
+Let create a new file shelltest.sh 
+
+ls - is used to list the current files
+
+pwd - used to print the current dir or path
+
+TO run the script file use - bash shelltest.sh
+
+TO check what is running shell echo $shell
+
+TO add the path of the path  #!/bin/bash -- to which shell has been excute 
+
+./shelltest.sh 
+
+if permission is requried to run the file -- need to change excutable file formate
+
+to see the long format of the ls -l '-l' is the flag to see the long format we can see PERMISSIONS 
+
+can use to chown --- change owner -- chown u+x shelltest.sh user can excute the file
+
+then you can run ./shelltest.sh
+
+------------------------------------------------------------------------------------------------------------------------
+
+cp is the copy command
+
+here is the example 
+## not good >>
+
+cp /my/location/from /my/location/to
+cp /my/location/here /my/location/there
+
+## BETTER
+
+cp $MY_LOCATION_FROM $MY_LOCATION_TO
+
+cp "MY_LOCATION_FROM/here" "MY_LOCATION_TO/there"
+
+this will be example the file path will be change corresponding to your path it will so so long sometime 
+
+-------------------------------------------------------------------------------------------------------------------------
+
+echo is used to print 
+read is used to get the input from user 
+
+eg.
+echo your name?
+read name
+
+echo hello $name
+
+
+-------------------------------------------------------------------------------------------------------------------------
+
+POSITIONAL ARGUMENTS
+
+arguments are a specific positions commands can take arguments a specific position, counting from one(0 reserved for the 
+shell)
+
+its all given space 
+
+let see how it works
+
+echo hello $1 $2
+
+let set a permission to file 
+
+lets run 
+
+./shelltest.sh john martin
+
+this both value pass in agrs
+
+---------------------------------------------------------------------------------------------------------------------------
+
+
+PIPING
+
+It is used to filter a large amount of data and also this is used to filter any process or files any as you want 
+
+sytax -- ` | grep 'specific word' ` that you need to filter
+
+for example ls -l /usr/bin | grep bash
+
+grep is the example word many more are used there ...
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+create a output in file 
+
+` > ` this symbol is used to write the output in a file 
+for eg echo 'hello world' > hello.txt . It written in the hello.txt file again you should write the 
+echi 'have a good day' > hello.txt its overwrite the content .
+
+` >> ` this symbol is used to overcomes the overwite the ouput will be added in single file 
+
+--------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
