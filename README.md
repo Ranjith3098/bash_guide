@@ -77,6 +77,15 @@ cp $MY_LOCATION_FROM $MY_LOCATION_TO
 cp "MY_LOCATION_FROM/here" "MY_LOCATION_TO/there"
 ```
 
+## Example of Move Command
+
+### same like as copy command
+
+```sh
+mv $MY_LOCATION_FROM $MY_LOCATION_TO
+mv "MY_LOCATION_FROM/HERE" "MY_LOCAION_TO/THERE"
+```
+
 ## Printing and Reading Input
 
 - **echo**: Used to print text.
