@@ -127,7 +127,13 @@ eg. cat << EOF
 
 -----------------------------------------------------------------------------------------------------------------
 
-Test Operator
+Test Operator or comparision Operators
+[hello = hello ]
+echo $?
+in this check the left hand and right hand side is equal it return 0 the echo statement is show the output
+[1=0]
+echo $?
+This is check as same but it return 1 
 
 
 
