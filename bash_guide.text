@@ -111,7 +111,23 @@ echi 'have a good day' > hello.txt its overwrite the content .
 
 --------------------------------------------------------------------------------------------------------------------
 
+Word Count 
 
+wc -c hello.txt this command count the word inside the file
+wc -c < hello.txt this return the only count
+wc -c <<< "Hello There" in this condition pass the sentence in strings
+~ 2
+
+-------------------------------------------------------------------------------------------------------------------
+
+EOF 
+This EOF is used to given input directly without opening the file
+eg. cat << EOF
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+Test Operator
 
 
 
