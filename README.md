@@ -121,3 +121,44 @@ echo "hello $1 $2"
   ```sh
   echo 'have a good day' >> hello.txt
   ```
+
+
+ **Passing Arguments**
+   - The script starts by prompting the user for two arguments using `$1` and `$2`, which typically represent the first and second command-line arguments passed to the script.
+   - However, in this context, the script is trying to read input directly into `$1` and `$2`, which isn't standard practice. Instead, arguments should be passed when running the script.
+
+ **Echoing Input**
+   - After capturing input, the script uses `echo` to print a greeting message.
+   - Example:
+     ```bash
+     echo 'hi', $2
+     echo 'hello', $1
+     ```
+
+ **Asking for User's Name**
+   - The script asks the user for their name and then greets them.
+   - Example:
+     ```bash
+     echo 'Is you New what is your Name ?'
+     read ans
+     echo 'hi Wellcome' $ans
+     ```
+
+ **Displaying Current Date**
+   - The script prints the current date using the `date` command.
+   - Example:
+     ```bash
+     echo 'today' `date`
+     ```
+
+ **Listing Files in a Directory**
+   - The script asks the user to input a directory path and then lists the files in that directory using the `ls` command.
+   - Example:
+     ```bash
+     echo 'what are you looking for'
+     read path
+     echo -e 'here is your path'
+     ls $path
+     ```
+
+
