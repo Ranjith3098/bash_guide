@@ -235,10 +235,10 @@ done
 
 ## Overview of `For` Loop Statement
 
-# Read the input into the variable 'inp'
+ Read the input into the variable 'inp'
 read inp
 
-# 'for' loop to iterate over each element in 'inp'
+ 'for' loop to iterate over each element in 'inp'
 ```bash
 for i in $inp
 do
@@ -252,7 +252,7 @@ The `case` statement in shell scripting allows you to execute different code blo
 
 ### Syntax
 
-
+```
 case -expression- in
   pattern1)
       # Code to execute if expression matches pattern1
@@ -264,6 +264,7 @@ case -expression- in
       # Default case: code to execute if no patterns match
       ;;
 esac
+```
 
 ```bash
 #!/bin/bash
