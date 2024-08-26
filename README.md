@@ -160,5 +160,131 @@ echo "hello $1 $2"
      echo -e 'here is your path'
      ls $path
      ```
+### Conditional Statements
+
+The script uses the `if`, `elif`, and `else` constructs to perform different actions based on the value of a number input by the user.
+
+### Operators Used:
+- **`-gt` (greater than):** Checks if the first number is greater than the second.
+- **`-lt` (less than):** Checks if the first number is less than the second.
+- **`-ge` (greater than or equal to):** Checks if the first number is greater than or equal to the second.
+- **`-le` (less than or equal to):** Checks if the first number is less than or equal to the second.
+- **`-eq` (equal to):** Checks if two numbers are equal.
+
+### Script Explanation
+
+1. **Introduction and User Prompt:**
+   - The script starts by printing a message to indicate that a conditional statement is being used.
+   - It then prompts the user to enter a number.
+
+2. **Evaluating the Number:**
+   - The script reads the number into the variable `num`.
+   - It uses `if`, `elif`, and `else` to check the value of `num`:
+     - If `num` is greater than 0, it prints "your number is positive".
+     - If `num` is less than 0, it prints "your number is negative".
+     - If `num` equals 0, it prints "uhh you enter zero".
+     - If the input is invalid or doesn't match the above conditions, it prints "you can't enter a number".
+
+3. **Ending the Conditional Block:**
+   - The `fi` keyword is used to end the `if` block.
+
+### Full Script
+
+```bash
+#!/bin/bash
+
+# Introduction message
+echo 'In this conditional statement is working'
+
+# Prompting user to enter a number
+echo 'enter a number'
+read num
+
+# Evaluating the number
+if [ $num -gt 0 ]; then
+  echo 'your number is positive'
+elif [ $num -lt 0 ]; then
+  echo 'your number is negative'
+elif [ $num -eq 0 ]; then
+  echo 'uhh you enter zero'
+else
+  echo "you can't enter a number"
+fi
+```
+
+### `while` Loop
+
+The `while` loop in this script increments a number (`i`) starting from the value provided by the user until it reaches 10.
+
+#### Code:
+```bash
+#!/bin/bash
+
+# Prompt the user to enter a starting number
+read nub
+
+# Assign the user's input to the variable 'i'
+i=$nub
+
+# 'while' loop to increment 'i' until it reaches 10
+while [ $i -lt 10 ]; do
+  echo "$i"
+  ((i += 1))
+done
+```
+
+## Overview of `For` Loop Statement
+
+# Read the input into the variable 'inp'
+read inp
+
+# 'for' loop to iterate over each element in 'inp'
+```bash
+for i in $inp
+do
+   echo $i
+done
+```
+
+## Overview of `case` Statement
+
+The `case` statement in shell scripting allows you to execute different code blocks based on the value of an expression. It is similar to `switch` statements in other programming languages.
+
+### Syntax
 
 
+case -expression- in
+  pattern1)
+      # Code to execute if expression matches pattern1
+      ;;
+  pattern2)
+      # Code to execute if expression matches pattern2
+      ;;
+  *)
+      # Default case: code to execute if no patterns match
+      ;;
+esac
+
+```bash
+#!/bin/bash
+
+# Sample case statement
+
+echo "Enter a number between 1 and 3:"
+read num
+
+case $num in
+  1)
+    echo "You entered one."
+    ;;
+  2)
+    echo "You entered two."
+    ;;
+  3)
+    echo "You entered three."
+    ;;
+  *)
+    echo "Invalid input. Please enter a number between 1 and 3."
+    ;;
+esac
+```
